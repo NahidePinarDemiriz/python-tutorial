@@ -1,11 +1,20 @@
-def merge_words(words: list[str]):
-    if len(words) == 0:
-        return ""
-    output = words[0]
-    if len(words) == 1:
-        return output
-    for word in words:
-        output += " " + word
-    return output
+# Writing comments for functions
+import inspect
+def square(x):
+    """
+    Returns the square of a number.
 
-print(merge_words(["Hello", "world"]))
+    Parameters:
+    x (int or float): The number to be squared.
+
+    Returns:
+    int or float: The square of the input number.
+    """
+    res = x * x
+    return res
+
+print(square(3))
+
+help(square) # Docstring
+print(inspect.getdoc(square))  # Docstring
+print(inspect.getsource(square))  # Body
